@@ -86,6 +86,7 @@ erDiagram
         int id PK
         string username UK
         string password_hash
+        string email
         string name
         string bio
         string avatar_path
@@ -318,7 +319,7 @@ flowchart TD
 
 | Method | Path | Description |
 |---|---|---|
-| POST | `/auth/register` | Register with unique username + password |
+| POST | `/auth/register` | Register with unique username + password; email optional |
 | POST | `/auth/login` | Login; returns JWT + vibe degradation flag |
 | POST | `/auth/logout` | Client discards token |
 
@@ -370,7 +371,7 @@ flowchart TD
 | Method | Path | Description |
 |---|---|---|
 | GET | `/profile` | Get profile data |
-| PATCH | `/profile` | Update name, bio, avatar |
+| PATCH | `/profile` | Update name, bio, avatar, email |
 | DELETE | `/profile` | GDPR purge — deletes all photos, albums, ML data, and account |
 
 ---
@@ -504,7 +505,7 @@ When migrating to a new machine, copy the model cache directories along with you
 
 7. **Cloudflare Tunnel binding** — FastAPI must be bound to `127.0.0.1`, not `0.0.0.0`, so it is only reachable through the tunnel.
 
-8. **No password recovery** — By design for v1. No email is collected. Forgotten passwords require an admin reset directly in the database. Email-based recovery is a planned future addition.
+8. **No password recovery** — By design for v1. Email is stored as an optional contact field for admin reference only and plays no role in auth or verification. Forgotten passwords require an admin reset directly in the database. Email-based recovery is a planned future addition.
 
 9. **CLIP model size** — ViT-B/32 is ~350 MB. It is downloaded once and cached. It must be present when migrating the server to a new machine.
 
