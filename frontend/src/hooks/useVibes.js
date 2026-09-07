@@ -1,1 +1,2 @@
-// TODO Phase 2 — useVibes hook for vibe setup state machine
+// Phase 2 — not yet implemented
+export function useVibes() { return {} }

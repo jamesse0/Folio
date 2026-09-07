@@ -1,1 +1,2 @@
-// TODO Phase 2 — vibe filter panel with warning icon on degraded labels
+// Phase 2 — not yet implemented
+export default function VibeSortPanel() { return null }

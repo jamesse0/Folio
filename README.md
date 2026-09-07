@@ -1,4 +1,4 @@
-# VibeFrame
+# Folio
 
 A self-hosted photographer portfolio platform. Photographers create private portfolios, share them via access codes, and organize their work using AI-powered face detection, scene recognition, and custom vibe/style classification — all running locally with no third-party API costs.
 
@@ -23,7 +23,7 @@ A self-hosted photographer portfolio platform. Photographers create private port
 
 ## Project Overview
 
-VibeFrame lets photographers:
+Folio lets photographers:
 - Create a private account and upload photos with captions
 - Share their portfolio via a unique 8-character access code
 - Organize photos using albums, face grouping, scene detection, and custom vibe/style categories
@@ -450,10 +450,10 @@ All four checks run server-side before any file is written to disk:
 Create a `.env` file in the backend directory (never commit this file):
 
 ```env
-DATABASE_URL=postgresql://user:password@localhost:5432/vibeframe
+DATABASE_URL=postgresql://user:password@localhost:5432/folio
 JWT_SECRET=<output of: openssl rand -hex 32>
-UPLOAD_DIR=/absolute/path/to/vibeframe/uploads
-THUMBNAIL_DIR=/absolute/path/to/vibeframe/thumbnails
+UPLOAD_DIR=/absolute/path/to/folio/uploads
+THUMBNAIL_DIR=/absolute/path/to/folio/thumbnails
 MAX_UPLOAD_MB=25
 FACE_CLUSTER_MIN_SIZE=3
 FACE_SIMILARITY_THRESHOLD=0.6
@@ -464,7 +464,7 @@ VIBE_DEGRADATION_THRESHOLD=5
 
 ```bash
 # 1. Database
-createdb vibeframe
+createdb folio
 cd backend && alembic upgrade head
 
 # 2. Backend
@@ -478,7 +478,7 @@ npm install
 npm run dev
 
 # 4. Cloudflare Tunnel (public access)
-cloudflared tunnel run vibeframe
+cloudflared tunnel run folio
 ```
 
 ### First-Time ML Setup

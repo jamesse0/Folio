@@ -1,1 +1,4 @@
-// Filter/sort sidebar — tabs for Albums, Faces, Places, Vibes (Phase 2 tabs stubbed/disabled)
+// Phase 2 — Albums, Faces, Places, Vibes filter sidebar (not yet implemented)
+export default function Sidebar() {
+  return null
+}

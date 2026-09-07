@@ -1,1 +1,2 @@
-// TODO Phase 2 — multi-step vibe setup: name vibes, label photos, train model
+// Phase 2 — not yet implemented
+export default function VibeWizard() { return null }

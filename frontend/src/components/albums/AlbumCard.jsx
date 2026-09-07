@@ -1,1 +1,2 @@
-// TODO Phase 2 — single album entry with name and photo count
+// Phase 2 — not yet implemented
+export default function AlbumCard() { return null }

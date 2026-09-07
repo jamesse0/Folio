@@ -1,1 +1,2 @@
-// TODO Phase 2 — vibe badge shown on PhotoDetail; clickable to reclassify for owner
+// Phase 2 — not yet implemented
+export default function VibeLabel() { return null }

@@ -1,1 +1,2 @@
-// TODO Phase 2 — list of albums for the filter sidebar
+// Phase 2 — not yet implemented
+export default function AlbumList() { return null }
